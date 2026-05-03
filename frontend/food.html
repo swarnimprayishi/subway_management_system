@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Food Ordering</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>🍔 Campus Clique Subway Management System</header>
+
+<div style="background: #0f172a; color: #94a3b8; padding: 10px; text-align: center;">
+    Welcome, <span class="user-display-name" style="color: #3b82f6; font-weight: bold;"></span>! | <a href="#" onclick="logout()" style="color: #ef4444; margin-left: 15px;">Logout</a>
+</div>
+
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="food.html">Food</a>
+    <a href="salon.html">Salon</a>
+    <a href="grocery.html">Grocery</a>
+    <a href="playzone.html">Play Zone</a>
+    <a href="gifts.html">Gifts</a>
+    <a href="juice.html">Juice</a>
+    <a href="bakery.html">Bakery</a>
+    <a href="orders.html" onclick="showOrders()">My Orders</a>
+    
+    <a href="admin.html" class="admin-btn">🛡️ Admin</a>
+   
+</nav>
+
+
+<!-- ✅ ADD THIS BELOW -->
+<div id="ordersSection" style="display:none;">
+    <h2>My Orders</h2>
+    <div id="ordersContainer"></div>
+</div>
+<!-- HERO SECTION -->
+<div class="hero main-hero">
+    <div class="hero-badge">
+        <span class="status-dot"></span>
+        Campus Delivery Available
+    </div>
+    <h1>Order Your Favorite Food</h1>
+    <p class="hero-subtitle">Fresh, delicious meals delivered to your campus location</p>
+</div>
+
+<!-- STATS -->
+<div class="stats-container">
+    <div class="stat-card">
+        <h2>500+</h2>
+        <p>Happy Customers</p>
+    </div>
+    <div class="stat-card">
+        <h2>5-10</h2>
+        <p>Minutes Delivery</p>
+    </div>
+    <div class="stat-card">
+        <h2>4.5★</h2>
+        <p>Average Rating</p>
+    </div>
+</div>
+
+<!-- ORDER FORM -->
+<div class="container">
+    <div class="order-card">
+
+        <div class="section-group">
+            <p class="label-text">Popular Items:</p>
+            <div class="popular-items-list">
+                <button type="button" class="btn-item">🍔 Burger</button>
+                <button type="button" class="btn-item">🍕 Pizza</button>
+                <button type="button" class="btn-item">🍚 Biryani</button>
+            </div>
+        </div>
+
+        <hr class="form-divider">
+
+        <form id="foodOrderForm">
+
+            <div class="input-field">
+                <label>Your Name</label>
+                <input type="text" id="name" placeholder="Enter your full name" required>
+            </div>
+
+            <div class="input-field">
+                <label>Select Food</label>
+                <select id="item" required>
+                    <option value="" disabled selected>Choose a food item...</option>
+                    <option value="Burger">Burger - ₹150</option>
+                    <option value="Pizza">Pizza - ₹350</option>
+                    <option value="Biryani">Biryani - ₹250</option>
+                    <option value="Pasta">Pasta - ₹280</option>
+                    <option value="Taco">Taco - ₹120</option>
+<option value="Sushi">Sushi - ₹450</option>
+<option value="Salad">Salad - ₹180</option>
+<option value="Sandwich">Sandwich - ₹110</option>
+<option value="Momos">Momos - ₹130</option>
+<option value="Noodles">Noodles - ₹160</option>
+<option value="French Fries">French Fries - ₹90</option>
+<option value="Garlic Bread">Garlic Bread - ₹120</option>
+<option value="Hot Dog">Hot Dog - ₹140</option>
+<option value="Steak">Steak - ₹650</option>
+<option value="Ramen">Ramen - ₹320</option>
+<option value="Dim Sum">Dim Sum - ₹210</option>
+<option value="Pancakes">Pancakes - ₹180</option>
+<option value="Waffles">Waffles - ₹200</option>
+<option value="Omelette">Omelette - ₹80</option>
+<option value="Burrito">Burrito - ₹260</option>
+<option value="Nachos">Nachos - ₹170</option>
+<option value="Quesadilla">Quesadilla - ₹240</option>
+<option value="Spring Rolls">Spring Rolls - ₹150</option>
+<option value="Fish and Chips">Fish and Chips - ₹380</option>
+<option value="Fried Chicken">Fried Chicken - ₹290</option>
+<option value="Grilled Cheese">Grilled Cheese - ₹100</option>
+<option value="Club Sandwich">Club Sandwich - ₹220</option>
+<option value="Caesar Salad">Caesar Salad - ₹210</option>
+<option value="Greek Salad">Greek Salad - ₹190</option>
+<option value="Lasagna">Lasagna - ₹420</option>
+<option value="Spaghetti">Spaghetti - ₹280</option>
+<option value="Mac and Cheese">Mac and Cheese - ₹190</option>
+<option value="Butter Chicken">Butter Chicken - ₹350</option>
+<option value="Paneer Tikka">Paneer Tikka - ₹280</option>
+<option value="Dal Makhani">Dal Makhani - ₹220</option>
+<option value="Naan">Naan - ₹40</option>
+<option value="Roti">Roti - ₹20</option>
+<option value="Fried Rice">Fried Rice - ₹180</option>
+<option value="Spring Onion Soup">Spring Onion Soup - ₹130</option>
+<option value="Tomato Soup">Tomato Soup - ₹120</option>
+<option value="Mushroom Soup">Mushroom Soup - ₹140</option>
+<option value="Bruschetta">Bruschetta - ₹160</option>
+<option value="Calamari">Calamari - ₹390</option>
+<option value="Shrimp Cocktail">Shrimp Cocktail - ₹450</option>
+<option value="Lobster Tail">Lobster Tail - ₹950</option>
+<option value="Crab Cakes">Crab Cakes - ₹480</option>
+<option value="Chicken Wings">Chicken Wings - ₹240</option>
+<option value="Onion Rings">Onion Rings - ₹110</option>
+<option value="Baked Potato">Baked Potato - ₹130</option>
+<option value="Mashed Potatoes">Mashed Potatoes - ₹140</option>
+<option value="Coleslaw">Coleslaw - ₹80</option>
+<option value="Corn on the Cob">Corn on the Cob - ₹70</option>
+<option value="BBQ Ribs">BBQ Ribs - ₹580</option>
+<option value="Beef Stroganoff">Beef Stroganoff - ₹490</option>
+<option value="Chicken Curry">Chicken Curry - ₹310</option>
+<option value="Lamb Chops">Lamb Chops - ₹750</option>
+<option value="Falafel Wrap">Falafel Wrap - ₹160</option>
+<option value="Hummus Plate">Hummus Plate - ₹140</option>
+<option value="Shawarma">Shawarma - ₹190</option>
+<option value="Kebab">Kebab - ₹260</option>
+<option value="Gyoza">Gyoza - ₹220</option>
+<option value="Tempura">Tempura - ₹290</option>
+<option value="Pad Thai">Pad Thai - ₹260</option>
+<option value="Green Curry">Green Curry - ₹280</option>
+<option value="Pho">Pho - ₹250</option>
+<option value="Banh Mi">Banh Mi - ₹170</option>
+<option value="Risotto">Risotto - ₹380</option>
+<option value="Paella">Paella - ₹550</option>
+<option value="Goulash">Goulash - ₹320</option>
+<option value="Schnitzel">Schnitzel - ₹340</option>
+<option value="Poutine">Poutine - ₹180</option>
+<option value="Clam Chowder">Clam Chowder - ₹210</option>
+<option value="Tiramisu">Tiramisu - ₹240</option>
+<option value="Cheesecake">Cheesecake - ₹260</option>
+<option value="Brownie">Brownie - ₹120</option>
+<option value="Apple Pie">Apple Pie - ₹160</option>
+<option value="Ice Cream Scoop">Ice Cream Scoop - ₹80</option>
+<option value="Sorbet">Sorbet - ₹100</option>
+<option value="Gelato">Gelato - ₹120</option>
+<option value="Churros">Churros - ₹150</option>
+<option value="Baklava">Baklava - ₹180</option>
+<option value="Creme Brulee">Creme Brulee - ₹220</option>
+<option value="Donut">Donut - ₹60</option>
+<option value="Cupcake">Cupcake - ₹90</option>
+<option value="Muffin">Muffin - ₹100</option>
+<option value="Croissant">Croissant - ₹110</option>
+<option value="Bagel with Cream Cheese">Bagel with Cream Cheese - ₹130</option>
+<option value="Egg Benedict">Egg Benedict - ₹280</option>
+<option value="French Toast">French Toast - ₹190</option>
+<option value="Breakfast Burrito">Breakfast Burrito - ₹230</option>
+<option value="Fruit Salad">Fruit Salad - ₹160</option>
+<option value="Acai Bowl">Acai Bowl - ₹320</option>
+<option value="Milkshake">Milkshake - ₹180</option>
+<option value="Smoothie">Smoothie - ₹200</option>
+<option value="Iced Coffee">Iced Coffee - ₹140</option>
+<option value="Hot Chocolate">Hot Chocolate - ₹120</option>
+<option value="Green Tea">Green Tea - ₹80</option>
+<option value="Espresso">Espresso - ₹100</option>
+<option value="Cappuccino">Cappuccino - ₹150</option>
+<option value="Latte">Latte - ₹160</option>
+                    <
+                </select>
+            </div>
+<div id="pricePreview" style="margin-top: 10px; font-weight: bold; color: #2ecc71;"></div>
+            <div class="input-field">
+                <label>Quantity</label>
+                <input type="number" id="quantity" value="1" min="1" required>
+            </div>
+
+            <div class="input-field">
+                <label>Special Instructions</label>
+                <textarea id="notes" placeholder="Any special requests? (Optional)"></textarea>
+            </div>
+
+            <button type="submit" class="submit-order-btn">Order Now</button>
+            
+         <script>
+           
+            // Add this at the start of your script section
+if (sessionStorage.getItem('isLoggedIn') !== 'true') {
+    window.location.href = 'login.html';
+}
+function placeOrder(itemName, itemPrice) {
+    const name = document.getElementById("name").value;
+
+    
+    // DYNAMIC PRICE EXTRACTION
+    let extractedPrice = 0;
+    const allSelects = document.querySelectorAll('select');
+    let targetSelect = allSelects.length > 0 ? allSelects[0] : null;
+    if (targetSelect && targetSelect.selectedIndex >= 0) {
+        const selectedText = targetSelect.options[targetSelect.selectedIndex].text;
+        const match = selectedText.match(/₹([\d,]+)/);
+        if (match) extractedPrice = parseInt(match[1].replace(/,/g, ''), 10);
+    }
+    
+    let dynamicQuantity = 1;
+    const dynQtyInput = document.querySelector('input[type="number"], #quantity');
+    if (dynQtyInput) {
+        dynamicQuantity = parseInt(dynQtyInput.value, 10) || 1;
+    }
+    const totalPrice = extractedPrice * dynamicQuantity;
+    
+    fetch("http://localhost:3000/api/orders", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            type: "food",
+            name: name,
+            item: itemName,
+            quantity: 1,
+            price: itemPrice,
+            rollNumber: sessionStorage.getItem('rollNumber')
+        })
+    })  
+    .then(res => res.json())
+    .then(() => {
+        alert(itemName + " ordered successfully! Total: ₹" + totalPrice);
+        window.location.href = "orders.html";
+    });
+}
+</script>
+        </form>
+
+    </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-container">
+
+    <div class="footer-section">
+      <h3>Sitemap</h3>
+      <a href="index.html">Home</a>
+      <a href="food.html">Food</a>
+      <a href="salon.html">Salon</a>
+      <a href="grocery.html">Grocery</a>
+      <a href="playzone.html">Play Zone</a>
+      <a href="gifts.html">Gifts</a>
+      <a href="juice.html">Juice</a>
+      <a href="bakery.html">Bakery</a>
+    </div>
+
+    <div class="footer-section">
+      <h3>Address</h3>
+      <p>17km Stone, NH-19, Mathura-Delhi Road, P.O. Chaumuhan</p>
+      <p>Mathura - 281406, Uttar Pradesh</p>
+    </div>
+
+    <div class="footer-section">
+      <h3>Contacts</h3>
+      <p>+91-5662-250900, 250909, 241489, +91-9927064017</p>
+      <p>glauniversity@gla.ac.in</p>
+    </div>
+
+    <div class="footer-section social">
+      <h3>Follow Us</h3>
+      <div class="icons">
+        <span>📘</span>
+        <span>📸</span>
+        <span>🌐</span>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    © 2026 GD Subway | All Rights Reserved
+  </div>
+</footer>
+
+<!-- ONLY POST REQUEST (ORDER) -->
+<script>
+    
+
+// Optional: Show the price to the user when they select an item
+function updatePriceDisplay() {
+    const item = document.getElementById("item").value;
+    const price = priceList[item];
+    document.getElementById("pricePreview").innerText = price ? "Price: ₹" + price : "";
+}
+document.getElementById("foodOrderForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    const name = document.getElementById("name").value;
+    const item = document.getElementById("item").value;
+    const quantity = document.getElementById("quantity").value;
+    const notes = document.getElementById("notes").value;
+
+    
+    // DYNAMIC PRICE EXTRACTION
+    let extractedPrice = 0;
+    const allSelects = document.querySelectorAll('select');
+    let targetSelect = allSelects.length > 0 ? allSelects[0] : null;
+    if (targetSelect && targetSelect.selectedIndex >= 0) {
+        const selectedText = targetSelect.options[targetSelect.selectedIndex].text;
+        const match = selectedText.match(/₹([\d,]+)/);
+        if (match) extractedPrice = parseInt(match[1].replace(/,/g, ''), 10);
+    }
+    
+    let dynamicQuantity = 1;
+    const dynQtyInput = document.querySelector('input[type="number"], #quantity');
+    if (dynQtyInput) {
+        dynamicQuantity = parseInt(dynQtyInput.value, 10) || 1;
+    }
+    const totalPrice = extractedPrice * dynamicQuantity;
+    
+    fetch("http://localhost:3000/api/orders", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({ 
+            name, 
+            item, 
+            quantity, 
+                        notes , price: extractedPrice, total: totalPrice, rollNumber: sessionStorage.getItem("rollNumber"), type: "food"})
+    })
+    .then(res => res.json())
+    .then(data => {
+        alert(`Order successful! Total: ₹${totalPrice}`);
+        
+        document.getElementById("foodOrderForm").reset();
+        document.getElementById("pricePreview").innerText = "";
+    })
+    .catch(err => console.error("Error placing order:", err));
+    
+});
+</script>
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const userRole = sessionStorage.getItem('userRole');
+        const adminBtns = document.querySelectorAll('.admin-btn');
+        if (userRole !== 'admin') {
+            adminBtns.forEach(btn => btn.style.display = 'none');
+        }
+    });
+</script>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const name = sessionStorage.getItem('userName');
+    
+    // Update all welcome texts
+    const displayNames = document.querySelectorAll('.user-display-name');
+    displayNames.forEach(el => { el.innerText = name || 'User'; });
+    
+    // Auto-fill the order form name field
+    const nameInput = document.getElementById('name');
+    if (nameInput) {
+        nameInput.value = name || '';
+        nameInput.setAttribute('readonly', 'true');
+        nameInput.style.backgroundColor = '#1e293b'; // slightly darker to indicate it's readonly
+        nameInput.style.color = '#94a3b8';
+        nameInput.style.cursor = 'not-allowed';
+    }
+});
+
+function logout() {
+    sessionStorage.clear();
+    window.location.href = 'login.html';
+}
+</script>
+
+</body>
+
+</html>
