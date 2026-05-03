@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sign Up - Campus Clique</title>
+    <style>
+        body {
+            background-image: linear-gradient(rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.9)), 
+                              url('https://betvis.com/wp-content/uploads/2023/11/QSR-restaurant-digital-menu-board-digital-signage-solution-SUBWAY-Betvis-2.webp');
+            background-size: cover;
+            background-attachment: fixed;
+            font-family: sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            color: white;
+        }
+        .signup-box {
+            background: #1e293b;
+            padding: 40px;
+            border-radius: 12px;
+            border: 1px solid #334155;
+            width: 350px;
+            text-align: center;
+        }
+        input, select {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border-radius: 6px;
+            border: 1px solid #334155;
+            background: #0f172a;
+            color: white;
+            box-sizing: border-box;
+        }
+        .signup-btn {
+            width: 100%;
+            padding: 12px;
+            background: #10b981;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<div class="signup-box">
+    <h2>Create Account</h2>
+    <form id="signupForm">
+        <input type="text" id="newName" placeholder="Full Name" required>
+        <input type="text" id="newRoll" placeholder="University ID" required>
+        <select id="newRole" required>
+            <option value="">Select Role</option>
+            <option value="student">Student</option>
+            <option value="teacher">Teacher</option>
+             <option value="admin">Admin</option>
+        </select>
+        <input type="password" id="newPassword" placeholder="Password" required>
+        <input type="password" id="confirmPassword" placeholder="Confirm Password" required>
+        <button type="submit" class="signup-btn">Sign Up</button>
+    </form>
+    <p style="font-size: 14px; color: #94a3b8;">Already have an account? <a href="login.html" style="color: #3b82f6;">Login</a></p>
+</div>
+
+<script>
+    
+    document.getElementById('signupForm').addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const password = document.getElementById('newPassword').value.trim();
+        const confirmPassword = document.getElementById('confirmPassword').value.trim();
+
+        if (password !== confirmPassword) {
+            alert("Passwords do not match!");
+            return;
+        }
+
+        const userData = {
+            name: document.getElementById('newName').value.trim(),
+            rollNumber: document.getElementById('newRoll').value.trim(),
+            role: document.getElementById('newRole').value,
+            password: password
+        };
+
+        // You will need a backend endpoint for this, e.g., /api/users
+        const res = await fetch("http://localhost:3000/api/users", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(userData)
+        });
+
+        if(res.ok) {
+            alert("Signup successful! Please login.");
+            window.location.href = 'login.html';
+        } else {
+            alert("Signup failed. Roll number might already exist.");
+        }
+    });
+</script>
+</body>
+</html>
