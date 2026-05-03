@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Gifts</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>🎁 Gifts & Merchandise</header>
+
+<div style="background: #0f172a; color: #94a3b8; padding: 10px; text-align: center;">
+    Welcome, <span class="user-display-name" style="color: #3b82f6; font-weight: bold;"></span>! | <a href="#" onclick="logout()" style="color: #ef4444; margin-left: 15px;">Logout</a>
+</div>
+
+
+<nav>
+<a href="index.html">Home</a>
+<a href="food.html">Food</a>
+<a href="salon.html">Salon</a>
+<a href="grocery.html">Grocery</a>
+<a href="playzone.html">Play Zone</a>
+<a href="gifts.html">Gifts</a>
+<a href="juice.html">Juice</a>
+<a href="bakery.html">Bakery</a>
+    <a href="orders.html" onclick="showOrders()">My Orders</a>
+    
+    <a href="admin.html" class="admin-btn">🛡️ Admin</a>
+    
+</nav>
+
+<!-- 🎁 HERO SECTION -->
+<section class="gifts-hero">
+  <div class="hero-content">
+
+    <div class="delivery-pill">
+      <span class="status-dot"></span>
+      Making every occasion memorable
+    </div>
+
+    <h1>Perfect Gifts for Every Occasion 🎁</h1>
+    <p>Surprise your loved ones with amazing gifts & merchandise</p>
+
+  </div>
+</section>
+
+<!-- 🎁 GIFT CATEGORIES -->
+<section class="gift-categories">
+
+  <div class="gift-box">
+    <img src="https://www.boxupgifting.com/cdn/shop/files/Birthdaybox-2_a0619b64-e64f-4f1b-a8ce-0f920815826f.jpg?v=1736422167&width=500">
+    <p>Birthday</p>
+  </div>
+
+  <div class="gift-box">
+    <img src="https://giftsbyrashi.com/cdn/shop/files/Five-Senses-Gift-For-Husband.webp?v=1766771595">
+    <p>Anniversary</p>
+  </div>
+
+  <div class="gift-box">
+    <img src="https://cdn.bloomsflora.com/uploads/product/bloomsflora/9134_28_15815.webp">
+    <p>Flowers</p>
+  </div>
+
+  <div class="gift-box">
+    <img src="https://promotionalwears.com/image/cache/catalog/data/artificial-plants/artificial-flower-plant-pot/artificial-flower-plant-pot-yellow-500x500.webp">
+    <p>Plantable Gift Items</p>
+  </div>
+
+</section>
+
+<!-- 🎁 ORDER FORM -->
+<div class="container">
+
+  <div class="gifts-card">
+
+    <h2>Order Gift</h2>
+
+    <form id="giftsForm">
+
+      <input type="text" id="name" placeholder="Name" required>
+
+      <select id="item" required>
+        <option value="">Select Gift</option>
+        <option value="Teddy">Teddy - ₹189</option>
+        <option value="Mug">Mug - ₹159</option>
+        <option value="T-shirt">T-shirt - ₹179</option>
+        <option value="Wireless Bluetooth Earbuds">Wireless Bluetooth Earbuds - ₹1,899</option>
+<option value="Portable Power Bank 10000mAh">Portable Power Bank 10000mAh - ₹1,250</option>
+<option value="RGB Gaming Mouse">RGB Gaming Mouse - ₹999</option>
+<option value="Multi-Device Charging Station">Multi-Device Charging Station - ₹2,100</option>
+<option value="Smart Fitness Band">Smart Fitness Band - ₹1,599</option>
+<option value="Mechanical Keyboard (Backlit)">Mechanical Keyboard (Backlit) - ₹2,450</option>
+<option value="Wooden Phone Stand">Wooden Phone Stand - ₹350</option>
+<option value="Noise Cancelling Headphones">Noise Cancelling Headphones - ₹3,500</option>
+<option value="Leather Laptop Sleeve">Leather Laptop Sleeve - ₹1,100</option>
+<option value="USB Astro Astronaut Light">USB Astro Astronaut Light - ₹450</option>
+<option value="Scented Soy Candle Set">Scented Soy Candle Set - ₹650</option>
+<option value="Macrame Wall Hanging">Macrame Wall Hanging - ₹850</option>
+<option value="Ceramic Succulent Planter">Ceramic Succulent Planter - ₹400</option>
+<option value="LED Moon Lamp (16 Colors)">LED Moon Lamp (16 Colors) - ₹1,200</option>
+<option value="Himalayan Salt Lamp">Himalayan Salt Lamp - ₹950</option>
+<option value="Abstract Desktop Sculpture">Abstract Desktop Sculpture - ₹1,400</option>
+<option value="Dreamcatcher (Handmade)">Dreamcatcher (Handmade) - ₹350</option>
+<option value="Fairy Lights (Warm White)">Fairy Lights (Warm White) - ₹250</option>
+<option value="Velvet Throw Pillow Case">Velvet Throw Pillow Case - ₹499</option>
+<option value="Digital Alarm Clock with Mirror">Digital Alarm Clock with Mirror - ₹750</option>
+<option value="Aromatic Oil Diffuser">Aromatic Oil Diffuser - ₹1,850</option>
+<option value="Framed Canvas Wall Art">Framed Canvas Wall Art - ₹1,150</option>
+<option value="Vintage Hourglass (Sand Timer)">Vintage Hourglass (Sand Timer) - ₹800</option>
+<option value="Desktop Zen Garden Kit">Desktop Zen Garden Kit - ₹1,250</option>
+<option value="Photo Clip String Lights">Photo Clip String Lights - ₹399</option>
+<option value="Leather Bound Daily Journal">Leather Bound Daily Journal - ₹750</option>
+<option value="Fountain Pen Gift Set">Fountain Pen Gift Set - ₹1,200</option>
+<option value="Hardcover Bullet Journal">Hardcover Bullet Journal - ₹550</option>
+<option value="Magnetic Whiteboard for Desk">Magnetic Whiteboard for Desk - ₹650</option>
+<option value="Motivational Planner 2024">Motivational Planner 2024 - ₹850</option>
+<option value="Set of 12 Dual-Tip Markers">Set of 12 Dual-Tip Markers - ₹450</option>
+<option value="Metal Paperweight Sculpture">Metal Paperweight Sculpture - ₹350</option>
+<option value="Bamboo Desktop Organizer">Bamboo Desktop Organizer - ₹1,100</option>
+<option value="Sticky Note Memo Cube">Sticky Note Memo Cube - ₹200</option>
+<option value="Custom Name Rubber Stamp">Custom Name Rubber Stamp - ₹499</option>
+<option value="Gold-Plated Bookmarks (Set of 3)">Gold-Plated Bookmarks (Set of 3) - ₹300</option>
+<option value="Ergonomic Mouse Pad">Ergonomic Mouse Pad - ₹450</option>
+<option value="Leather Business Card Holder">Leather Business Card Holder - ₹350</option>
+<option value="Sketchbook (Heavyweight Paper)">Sketchbook (Heavyweight Paper) - ₹600</option>
+<option value="Washi Tape Set (10 Rolls)">Washi Tape Set (10 Rolls) - ₹400</option>
+<option value="Classic Aviator Sunglasses">Classic Aviator Sunglasses - ₹1,200</option>
+<option value="Slim Bi-fold Leather Wallet">Slim Bi-fold Leather Wallet - ₹950</option>
+<option value="Canvas Tote Bag (Eco-friendly)">Canvas Tote Bag (Eco-friendly) - ₹350</option>
+<option value="Stainless Steel Water Bottle">Stainless Steel Water Bottle - ₹750</option>
+<option value="Travel Neck Pillow (Memory Foam)">Travel Neck Pillow (Memory Foam) - ₹850</option>
+<option value="Compact Travel Umbrella">Compact Travel Umbrella - ₹550</option>
+<option value="Anti-theft Backpack">Anti-theft Backpack - ₹2,800</option>
+<option value="Embroidered Baseball Cap">Embroidered Baseball Cap - ₹600</option>
+<option value="Silk Sleep Mask Set">Silk Sleep Mask Set - ₹450</option>
+<option value="Leather Passport Cover">Leather Passport Cover - ₹499</option>
+<option value="Enamel Pin Badge Set">Enamel Pin Badge Set - ₹300</option>
+<option value="Personalized Luggage Tag">Personalized Luggage Tag - ₹250</option>
+<option value="Woolen Scarf (Plaid Pattern)">Woolen Scarf (Plaid Pattern) - ₹850</option>
+<option value="Canvas Messenger Bag">Canvas Messenger Bag - ₹1,650</option>
+<option value="Unisex Beanie Hat">Unisex Beanie Hat - ₹399</option>
+<option value="Organic Lip Balm Set">Organic Lip Balm Set - ₹450</option>
+<option value="Jade Roller & Gua Sha Set">Jade Roller & Gua Sha Set - ₹850</option>
+<option value="Handmade Charcoal Soap Bar">Handmade Charcoal Soap Bar - ₹250</option>
+<option value="Luxury Bath Bomb Set">Luxury Bath Bomb Set - ₹700</option>
+<option value="Sandalwood Beard Oil">Sandalwood Beard Oil - ₹550</option>
+<option value="Shea Butter Hand Cream">Shea Butter Hand Cream - ₹350</option>
+<option value="Eucalyptus Shower Steamers">Eucalyptus Shower Steamers - ₹600</option>
+<option value="Bamboo Toothbrush Set">Bamboo Toothbrush Set - ₹299</option>
+<option value="Electric Face Cleansing Brush">Electric Face Cleansing Brush - ₹1,400</option>
+<option value="Lavender Pillow Mist">Lavender Pillow Mist - ₹450</option>
+<option value="1000 Piece Jigsaw Puzzle">1000 Piece Jigsaw Puzzle - ₹1,100</option>
+<option value="Classic Rubik's Cube 3x3">Classic Rubik's Cube 3x3 - ₹350</option>
+<option value="Mini Tabletop Pool Set">Mini Tabletop Pool Set - ₹1,800</option>
+<option value="Playing Cards (Gold Foil)">Playing Cards (Gold Foil) - ₹450</option>
+<option value="DIY Miniature House Kit">DIY Miniature House Kit - ₹2,200</option>
+<option value="Wooden Yo-Yo (Classic)">Wooden Yo-Yo (Classic) - ₹150</option>
+<option value="Retro Handheld Game Console">Retro Handheld Game Console - ₹1,500</option>
+<option value="Stress Relief Fidget Spinner">Stress Relief Fidget Spinner - ₹199</option>
+<option value="Magnetic Dart Board Set">Magnetic Dart Board Set - ₹850</option>
+<option value="Kaleidoscope Toy">Kaleidoscope Toy - ₹250</option>
+<option value="Instax Mini Film (Pack of 10)">Instax Mini Film (Pack of 10) - ₹899</option>
+<option value="Slime Making Kit">Slime Making Kit - ₹550</option>
+<option value="Telescope (Beginner Level)">Telescope (Beginner Level) - ₹4,500</option>
+<option value="Musical Wind Chime">Musical Wind Chime - ₹650</option>
+<option value="Ceramic Piggy Bank">Ceramic Piggy Bank - ₹400</option>
+<option value="Bamboo Cutting Board">Bamboo Cutting Board - ₹750</option>
+<option value="Silicon Cupcake Molds">Silicon Cupcake Molds - ₹350</option>
+<option value="French Press Coffee Maker">French Press Coffee Maker - ₹1,450</option>
+<option value="Stainless Steel Straw Set">Stainless Steel Straw Set - ₹250</option>
+<option value="Electric Wine Opener">Electric Wine Opener - ₹1,200</option>
+<option value="Slate Coasters (Set of 4)">Slate Coasters (Set of 4) - ₹499</option>
+<option value="Popcorn Maker (Silicone)">Popcorn Maker (Silicone) - ₹650</option>
+<option value="Honey Dipper & Jar Set">Honey Dipper & Jar Set - ₹550</option>
+<option value="Infuser Water Bottle">Infuser Water Bottle - ₹600</option>
+<option value="Pizza Stone & Cutter Set">Pizza Stone & Cutter Set - ₹1,850</option>
+<option value="Decorative Salt & Pepper Shakers">Decorative Salt & Pepper Shakers - ₹450</option>
+<option value="Ceramic Ramen Bowl with Chopsticks">Ceramic Ramen Bowl with Chopsticks - ₹950</option>
+<option value="Tea Leaf Strainer (Swan Shape)">Tea Leaf Strainer (Swan Shape) - ₹200</option>
+<option value="Lunch Box with Cutlery Set">Lunch Box with Cutlery Set - ₹850</option>
+<option value="Cocktail Shaker Kit">Cocktail Shaker Kit - ₹1,550</option>
+      </select>
+
+      <input type="number" id="quantity" placeholder="Quantity" min="1" required>
+
+      <textarea id="notes" placeholder="Notes (optional)"></textarea>
+
+      <button type="submit">Order</button>
+
+    </form>
+
+  </div>
+
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-container">
+
+    <div class="footer-section">
+      <h3>Sitemap</h3>
+      <a href="index.html">Home</a>
+      <a href="food.html">Food</a>
+      <a href="salon.html">Salon</a>
+      <a href="grocery.html">Grocery</a>
+      <a href="playzone.html">Play Zone</a>
+      <a href="gifts.html">Gifts</a>
+      <a href="juice.html">Juice</a>
+      <a href="bakery.html">Bakery</a>
+    </div>
+
+    <div class="footer-section">
+      <h3>Address</h3>
+      <p>17km Stone, NH-19, Mathura-Delhi Road, P.O. Chaumuhan</p>
+      <p>Mathura - 281406, Uttar Pradesh</p>
+    </div>
+
+    <div class="footer-section">
+      <h3>Contacts</h3>
+      <p>
+        +91-5662-250900,
+        250909, 241489,
+        +91-9927064017
+      </p>
+      <p>glauniversity@gla.ac.in</p>
+    </div>
+
+    <div class="footer-section social">
+      <h3>Follow Us</h3>
+      <div class="icons">
+        <span>📘</span>
+        <span>📸</span>
+        <span>🌐</span>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    © 2026 GD Subway | All Rights Reserved
+  </div>
+</footer>
+
+<!-- ✅ SCRIPT (CONNECTED TO BACKEND) -->
+<script>
+  // Add this at the start of your script section
+if (sessionStorage.getItem('isLoggedIn') !== 'true') {
+    window.location.href = 'login.html';
+}
+document.getElementById("giftsForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    const name = document.getElementById("name").value;
+    const item = document.getElementById("item").value;
+    const quantity = document.getElementById("quantity").value;
+    const notes = document.getElementById("notes").value;
+
+    
+    // DYNAMIC PRICE EXTRACTION
+    let extractedPrice = 0;
+    const allSelects = document.querySelectorAll('select');
+    let targetSelect = allSelects.length > 0 ? allSelects[0] : null;
+    if (targetSelect && targetSelect.selectedIndex >= 0) {
+        const selectedText = targetSelect.options[targetSelect.selectedIndex].text;
+        const match = selectedText.match(/₹([\d,]+)/);
+        if (match) extractedPrice = parseInt(match[1].replace(/,/g, ''), 10);
+    }
+    
+    let dynamicQuantity = 1;
+    const dynQtyInput = document.querySelector('input[type="number"], #quantity');
+    if (dynQtyInput) {
+        dynamicQuantity = parseInt(dynQtyInput.value, 10) || 1;
+    }
+    const totalPrice = extractedPrice * dynamicQuantity;
+    
+    fetch("http://localhost:3000/api/orders", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            type: "gift",
+            name,
+            item,
+            quantity,
+            notes
+        , price: extractedPrice, total: totalPrice, rollNumber: sessionStorage.getItem("rollNumber"), type: "gifts"})
+    })
+    .then(res => res.json())
+    .then(data => {
+        alert(data.message + " Total: ₹" + totalPrice);
+        document.getElementById("giftsForm").reset();
+    })
+    .catch(err => console.error("Error:", err));
+});
+</script>
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const userRole = sessionStorage.getItem('userRole');
+        const adminBtns = document.querySelectorAll('.admin-btn');
+        if (userRole !== 'admin') {
+            adminBtns.forEach(btn => btn.style.display = 'none');
+        }
+    });
+</script>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const name = sessionStorage.getItem('userName');
+    
+    // Update all welcome texts
+    const displayNames = document.querySelectorAll('.user-display-name');
+    displayNames.forEach(el => { el.innerText = name || 'User'; });
+    
+    // Auto-fill the order form name field
+    const nameInput = document.getElementById('name');
+    if (nameInput) {
+        nameInput.value = name || '';
+        nameInput.setAttribute('readonly', 'true');
+        nameInput.style.backgroundColor = '#1e293b'; // slightly darker to indicate it's readonly
+        nameInput.style.color = '#94a3b8';
+        nameInput.style.cursor = 'not-allowed';
+    }
+});
+
+function logout() {
+    sessionStorage.clear();
+    window.location.href = 'login.html';
+}
+</script>
+
+</body>
+
+</html>
