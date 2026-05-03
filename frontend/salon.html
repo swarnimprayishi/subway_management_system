@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Salon Booking</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <header>💇 Salon Booking</header>
+
+  <div style="background: #0f172a; color: #94a3b8; padding: 10px; text-align: center;">
+    Welcome, <span class="user-display-name" style="color: #3b82f6; font-weight: bold;"></span>! | <a href="#"
+      onclick="logout()" style="color: #ef4444; margin-left: 15px;">Logout</a>
+  </div>
+
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="food.html">Food</a>
+    <a href="salon.html">Salon</a>
+    <a href="grocery.html">Grocery</a>
+    <a href="playzone.html">Play Zone</a>
+    <a href="gifts.html">Gifts</a>
+    <a href="juice.html">Juice</a>
+    <a href="bakery.html">Bakery</a>
+    <a href="orders.html" onclick="showOrders()">My Orders</a>
+
+    <a href="admin.html" class="admin-btn">🛡️ Admin</a>
+
+  </nav>
+
+  <!-- ===== SALON HERO SECTION ===== -->
+  <section class="salon-hero">
+    <div class="overlay"></div>
+
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="status-dot"></span>
+        Professional Services Available
+      </div>
+
+      <h1>Book Your Salon Appointment</h1>
+      <p>Premium grooming services right on your campus</p>
+    </div>
+  </section>
+  <!-- ===== NEW SECTION (AFTER HERO, BEFORE FORM) ===== -->
+  <section class="services-section">
+    <h2 class="services-title">Our Popular Services</h2>
+
+    <div class="services-container">
+      <div class="service-card">
+        <span class="service-icon">✂</span> Hair Cut
+      </div>
+      <div class="service-card">
+        <span class="service-icon">🧔</span> Beard Trim
+      </div>
+      <div class="service-card">
+        <span class="service-icon">🎭</span> Facial
+      </div>
+      <div class="service-card">
+        <span class="service-icon">🎨</span> Hair Styling
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== BOOKING FORM ===== -->
+  <div class="container">
+    <div class="card salon-card">
+      <h2>Book Service</h2>
+
+      <form class="salon-form">
+        <input type="text" placeholder="Enter Name" required>
+
+        <select required>
+          <option>Select Service</option>
+          <option>Hair Cut - ₹2500</option>
+          <option>Shaving - ₹250</option>
+          <option>Facial - ₹120</option>
+          <option>Hair Styling - ₹300</option>
+          <option>Classic Buzz Cut - ₹200</option>
+          <option>Charcoal Deep Cleansing Facial - ₹1500</option>
+          <option>Hot Towel Premium Shave - ₹300</option>
+          <option>Keratin Hair Smoothing - ₹4500</option>
+          <option>Beard Trimming & Shaping - ₹250</option>
+          <option>Gold Radiance Facial - ₹2500</option>
+          <option>Wedding Hair Styling (Groom) - ₹1200</option>
+          <option>Anti-Dandruff Scalp Treatment - ₹800</option>
+          <option>Skin Whitening De-Tan Pack - ₹500</option>
+          <option>Kids Trendy Haircut - ₹250</option>
+          <option>Organic Aloe Vera Facial - ₹1100</option>
+          <option>Hair Color (Root Touch-up) - ₹900</option>
+          <option>Straight Razor Head Shave - ₹350</option>
+          <option>Moroccan Hair Spa - ₹1800</option>
+          <option>Fruit Vitamin Facial - ₹950</option>
+          <option>Party Look Hair Gel Styling - ₹400</option>
+          <option>Beard Color/Dye Application - ₹450</option>
+          <option>O3+ Professional Facial - ₹2800</option>
+          <option>Faded Undercut Style - ₹450</option>
+          <option>Refreshing Face Massage - ₹300</option>
+          <option>Global Hair Coloring - ₹2200</option>
+          <option>Threading (Eyebrows & Forehead) - ₹100</option>
+          <option>Diamond Skin Polishing - ₹3000</option>
+          <option>Hair Fall Control Therapy - ₹1500</option>
+          <option>Moustache Waxing & Styling - ₹150</option>
+          <option>Wine Facial Therapy - ₹1600</option>
+          <option>High-Volume Blow Dry - ₹550</option>
+          <option>Hair Straightening (Temporary) - ₹800</option>
+          <option>Detoxifying Clay Mask - ₹600</option>
+          <option>Senior Citizen Classic Cut - ₹200</option>
+          <option>Men’s Manicure & Hand Scrub - ₹700</option>
+          <option>Pearl Glow Facial - ₹1400</option>
+          <option>Beard Spa with Essential Oils - ₹650</option>
+          <option>Formal Office Hair Styling - ₹350</option>
+          <option>Scalp Scrub & Exfoliation - ₹500</option>
+          <option>VLCC Insta-Glow Facial - ₹1000</option>
+          <option>Sideburn Trim & Align - ₹120</option>
+          <option>Hair Highlights (Per Streak) - ₹300</option>
+          <option>Aromatherapy Facial - ₹1700</option>
+          <option>Long Hair Layered Cut - ₹600</option>
+          <option>Shaving with Foam & Aftershave - ₹150</option>
+          <option>Acne Control Facial Treatment - ₹1350</option>
+          <option>Hair Botox Treatment - ₹5500</option>
+          <option>Messy Texture Hair Styling - ₹400</option>
+          <option>Nose & Ear Waxing - ₹200</option>
+          <option>Herbal Henna Application - ₹400</option>
+          <option>Tan Removal Face Scrub - ₹350</option>
+          <option>Pompadour Style Cut - ₹500</option>
+          <option>Hydrating Under-Eye Treatment - ₹450</option>
+          <option>Full Head Massage (Oil) - ₹350</option>
+          <option>Silver Facial for Men - ₹1200</option>
+          <option>Balayage Hair Coloring - ₹3500</option>
+          <option>Goatee Grooming - ₹180</option>
+          <option>Spike Hair Styling - ₹300</option>
+          <option>Chocolate Wax Facial Scrub - ₹750</option>
+          <option>Deep Conditioning Hair Mask - ₹900</option>
+          <option>Crew Cut (Military Style) - ₹220</option>
+          <option>Anti-Aging Tightening Facial - ₹2200</option>
+          <option>Beard Softening Treatment - ₹400</option>
+          <option>Creative Hair Tattoo/Design - ₹800</option>
+          <option>Oxygen Boosting Facial - ₹1900</option>
+          <option>Perming/Curls Treatment - ₹2500</option>
+          <option>Classic Scissor Cut - ₹300</option>
+          <option>Blackhead Removal Session - ₹300</option>
+          <option>Slick Back Formal Styling - ₹450</option>
+          <option>Tea Tree Oil Scalp Treatment - ₹700</option>
+          <option>Neem Purification Facial - ₹850</option>
+          <option>Razor Fade Cut - ₹400</option>
+          <option>Gray Hair Coverage (Beard) - ₹350</option>
+          <option>Rebonding (Chemical) - ₹4000</option>
+          <option>Coffee Bean Face Scrub - ₹450</option>
+          <option>Temple Fade Styling - ₹250</option>
+          <option>Bio-Hydra Facial - ₹2100</option>
+          <option>Hair Dusting (Split Ends) - ₹500</option>
+          <option>Luxury Foam Shave & Steam - ₹450</option>
+          <option>Braiding Styling (Per Row) - ₹200</option>
+          <option>Saffron Brightening Facial - ₹1800</option>
+          <option>Taper Fade Haircut - ₹350</option>
+          <option>Leave-in Conditioner Styling - ₹250</option>
+          <option>Volcanic Ash Face Mask - ₹900</option>
+          <option>Hair Serum Shine Treatment - ₹300</option>
+          <option>Neck Shave & Cleanup - ₹100</option>
+          <option>Collagen Boost Facial - ₹2600</option>
+          <option>Mohawk Styling - ₹550</option>
+          <option>Pre-Bleach Hair Protection - ₹400</option>
+          <option>Sandalwood Calming Facial - ₹1100</option>
+          <option>Fringe/Bangs Haircut - ₹300</option>
+          <option>Beard Oil Hot Massage - ₹350</option>
+          <option>Peptide Skin Treatment - ₹3000</option>
+          <option>Afro Hair Styling - ₹700</option>
+          <option>Men’s Pedicure & Soak - ₹800</option>
+          <option>Vitamin C Glow Facial - ₹1500</option>
+          <option>Caesar Style Haircut - ₹350</option>
+          <option>Dry Shampoo Styling - ₹200</option>
+          <option>Papaya Skin Cleansing - ₹700</option>
+          <option>Shoulder & Back Massage - ₹600</option>
+          <option>Bowl Cut (Modern) - ₹250</option>
+          <option>Cooling Menthol Shave - ₹200</option>
+          <option>Hyaluronic Acid Facial - ₹2400</option>
+          <option>Ultimate Grooming Combo - ₹3500</option>
+        </select>
+
+        <input type="date" required>
+        <input type="time" required>
+
+        <button type="submit">Book Now</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="footer-container">
+
+      <div class="footer-section">
+        <h3>Sitemap</h3>
+        <a href="index.html">Home</a>
+        <a href="food.html">Food</a>
+        <a href="salon.html">Salon</a>
+        <a href="grocery.html">Grocery</a>
+        <a href="playzone.html">Play Zone</a>
+        <a href="gifts.html">Gifts</a>
+        <a href="juice.html">Juice</a>
+        <a href="bakery.html">Bakery</a>
+      </div>
+
+      <div class="footer-section">
+        <h3>Address</h3>
+        <p>17km Stone, NH-19, Mathura-Delhi Road, P.O. Chaumuhan</p>
+        <p>Mathura - 281406, Uttar Pradesh</p>
+      </div>
+
+      <div class="footer-section">
+        <h3>Contacts</h3>
+        <p>+91-5662-250900, 250909, 241489, +91-9927064017</p>
+        <p>glauniversity@gla.ac.in</p>
+      </div>
+
+      <div class="footer-section social">
+        <h3>Follow Us</h3>
+        <div class="icons">
+          <span>📘</span>
+          <span>📸</span>
+          <span>🌐</span>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      © 2026 GD Subway | All Rights Reserved
+    </div>
+  </footer>
+
+
+  <script>
+    // Add this at the start of your script section
+    if (sessionStorage.getItem('isLoggedIn') !== 'true') {
+      window.location.href = 'login.html';
+    }
+    document.querySelector(".salon-form").addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      // Finding elements by their types/placeholders as they appear in your HTML
+      const nameInput = document.querySelector('input[placeholder="Enter Name"]');
+      const serviceSelect = document.querySelector('select');
+      const dateInput = document.querySelector('input[type="date"]');
+      const timeInput = document.querySelector('input[type="time"]');
+
+
+      // DYNAMIC PRICE EXTRACTION
+      let extractedPrice = 0;
+      const allSelects = document.querySelectorAll('select');
+      let targetSelect = allSelects.length > 0 ? allSelects[0] : null;
+      if (targetSelect && targetSelect.selectedIndex >= 0) {
+        const selectedText = targetSelect.options[targetSelect.selectedIndex].text;
+        const match = selectedText.match(/₹([\d,]+)/);
+        if (match) extractedPrice = parseInt(match[1].replace(/,/g, ''), 10);
+      }
+
+      let dynamicQuantity = 1;
+      const dynQtyInput = document.querySelector('input[type="number"], #quantity');
+      if (dynQtyInput) {
+        dynamicQuantity = parseInt(dynQtyInput.value, 10) || 1;
+      }
+      const totalPrice = extractedPrice * dynamicQuantity;
+
+      fetch("http://localhost:3000/api/orders", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          type: "Salon", // Identifies category in CSV
+          name: nameInput.value,
+          item: serviceSelect.value,
+          quantity: 1, // Quantity is usually 1 for an appointment
+          notes: `Appt: ${dateInput.value} at ${timeInput.value}` // Saving date/time in notes
+          , price: extractedPrice, total: totalPrice, rollNumber: sessionStorage.getItem("rollNumber"), type: "salon"
+        })
+      })
+        .then(res => res.json())
+        .then(data => {
+          alert(data.message + " Total: ₹" + totalPrice);
+          document.querySelector(".salon-form").reset();
+        })
+        .catch(err => {
+          console.error("Error:", err);
+          alert("Booking failed. Ensure server.js is running.");
+        });
+    });
+  </script>
+
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const userRole = sessionStorage.getItem('userRole');
+      const adminBtns = document.querySelectorAll('.admin-btn');
+      if (userRole !== 'admin') {
+        adminBtns.forEach(btn => btn.style.display = 'none');
+      }
+    });
+  </script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const name = sessionStorage.getItem('userName');
+
+      // Update all welcome texts
+      const displayNames = document.querySelectorAll('.user-display-name');
+      displayNames.forEach(el => { el.innerText = name || 'User'; });
+
+      // Auto-fill the order form name field
+      const nameInput = document.getElementById('name');
+      if (nameInput) {
+        nameInput.value = name || '';
+        nameInput.setAttribute('readonly', 'true');
+        nameInput.style.backgroundColor = '#1e293b'; // slightly darker to indicate it's readonly
+        nameInput.style.color = '#94a3b8';
+        nameInput.style.cursor = 'not-allowed';
+      }
+    });
+
+    function logout() {
+      sessionStorage.clear();
+      window.location.href = 'login.html';
+    }
+  </script>
+
+</body>
+
+</html>
