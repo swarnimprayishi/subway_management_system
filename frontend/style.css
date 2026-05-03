@@ -1,0 +1,1465 @@
+/* =======================
+   BODY (GLOBAL STYLE)
+======================= */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    color: white;
+}
+
+/* =======================
+   HEADER
+======================= */
+header {
+    background: rgba(15, 23, 42, 0.8);
+    padding: 15px;
+    text-align: center;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+/* =======================
+   NAVBAR
+======================= */
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    background: #1e293b;
+    padding: 10px;
+}
+
+nav a {
+    color: #cbd5f5;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+nav a:hover {
+    color: white;
+}
+
+/* =======================
+   HERO (COMMON STYLE)
+======================= */
+.hero {
+    height: 350px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;  /* fixed typo align-items */
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+    padding: 60px 20px; background: linear-gradient(135deg, #312e81, #1e1b4b);
+}
+
+.hero h1 {
+    font-size: 42px;
+    margin: 0;
+}
+
+.hero p {
+    font-size: 20px;
+    color: #cbd5f5;
+}
+
+/* =======================
+   MAIN HERO (HOME PAGE)
+======================= */
+.main-hero {
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+                url('https://images.openai.com/static-rsc-4/jmWeP9aR0DOKdPEMGULzPNQrN07GYS3malhaSFZi9aVMEWEntiXVnS6pfCqDic-QHo8Vw8-4-6_bAFRmL2Vm2wNS0yJWOgdX4CdhXO6xkxueJXBqvfOKNCOR8N1LJAaEnk5EcEK6WqNbNezB1q8751HbSRqin2T1xGNqlp5AgSw?purpose=inline');
+}
+
+/* =======================
+   FOOD BANNER (FOOD PAGE)
+======================= */
+.food-banner {
+    height: 300px;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+                url('https://images.openai.com/static-rsc-4/kn8D1pFm4JB0VpB_bt8wiZzsWsodEHFNst0FUV68VCmlUj2J8F2vaWXu_KO3U7gIknuuSrizSjyNtjcxwYWbqPYG2balINzq0Q1StRgGLp400won4fiwH_-TUom7kOdp2DCgBqkk8IEVyr6Dvr52paxo-okeQNaob3fpuiJAqVXcrxmw5WPxTKgIxGKY8_Gr?purpose=inline');
+    background-size: cover;
+    background-position: center;
+}
+
+/* =======================
+   SERVICES HEADER
+======================= */
+.services-header {
+    text-align: center;
+    margin: 40px 0 20px;
+}
+
+.services-header h1 {
+    font-size: 40px;
+    color: #e2e8f0;
+    
+
+}
+
+.services-header p {
+    font-size: 18px;
+    color: #94a3b8;
+    
+}
+
+/* =======================
+   HERO BADGE (WELCOME TAG)
+======================= */
+.hero-badge {
+    display: inline-flex;
+    align-items: center;
+    background: rgba(30, 41, 59, 0.5);
+    border: 1px solid rgba(99, 102, 241, 0.3);
+    padding: 8px 24px;
+    border-radius: 100px;
+    
+    color: #cbd5e1;
+    margin-bottom: 24px;
+}
+
+/* STATUS DOT */
+.status-dot {
+    height: 10px;
+    width: 10px;
+    background-color: #6366f1;
+    border-radius: 50%;
+    margin-right: 12px;
+    
+}
+
+/* =======================
+   HERO TEXT
+======================= */
+.main-hero h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+}
+
+.hero-subtitle {
+    max-width: 600px;
+    margin: 0 auto 40px;
+    color: #94a3b8;
+}
+
+/* =======================
+   HERO BUTTONS
+======================= */
+.hero-buttons {
+    display: flex;
+
+    gap: 15px;
+}
+
+.btn-primary {
+    background: linear-gradient(90deg, #6366f1, #a855f7);
+    
+    padding: 14px 28px;
+    border-radius: 8px;
+}
+
+.btn-secondary {
+    border: 1px solid #334155;
+    padding: 14px 28px;
+    border-radius: 8px;
+}
+
+/* =======================
+   SERVICE CARDS
+======================= */
+.container {
+
+    display: flex;              /* horizontal layout */
+    flex-direction: row;
+    gap: 20px;
+    padding: 30px;
+
+    overflow-x: auto;           /* scroll */
+    scroll-behavior: smooth;
+
+    max-width: 100%;
+}
+
+.card {
+    
+    background: rgba(15, 23, 42, 0.7);
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+
+    min-width: 250px;           /* 🔥 important */
+    flex-shrink: 0;             /* 🔥 prevents shrinking */
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+.card h2 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.card button {
+
+    background: #4f46e5;
+    color: white;
+    padding: 10px 30px;
+    border-radius: 8px;
+    border: none;
+}
+
+.card button:hover {
+    background: #6366f1;
+    transform: scale(1.05);
+}
+.card:hover {
+    transform: translateY(-10px);
+    border-color: #6366f1;
+
+}
+
+/* =======================
+   STATS SECTION
+======================= */
+.stats-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 40px;
+}
+
+.stat-card {
+    flex: 1;
+    max-width: 300px;
+    background: rgba(30, 41, 59, 0.3);
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.stat-card h2 {
+    font-size: 2.5rem;
+}
+
+.stat-card p {
+    color: #94a3b8;
+}
+
+/* =======================
+   ORDER FORM (FOOD PAGE)
+======================= */
+.order-card {
+    width: 750px;
+    max-width: 90%;
+    margin: 20px auto;
+    padding: 25px;
+    background: #1a2236;
+    border-radius: 15px;
+}
+
+/* POPULAR ITEMS */
+.popular-items-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.btn-item {
+    background: #0f172a;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+/* FORM INPUTS */
+.input-field {
+    margin-bottom: 15px;
+}
+
+.input-field input,
+.input-field select,
+.input-field textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    background: #111827;
+    color: white;
+    border: 1px solid #334155;
+}
+
+/* QUANTITY CONTROLS */
+.qty-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.qty-control {
+    padding: 8px 12px;
+    background: #334155;
+    color: white;
+    border: none;
+}
+
+.qty-input {
+    width: 60px;
+    text-align: center;
+}
+
+/* SUBMIT BUTTON */
+.submit-order-btn {
+    width: 100%;
+    padding: 15px;
+    background: #4f46e5;
+    border: none;
+    border-radius: 10px;
+    color: white;
+}
+
+/* =======================
+   FOOTER
+======================= */
+.footer {
+    background: #0f172a;
+    padding: 30px 20px;
+    color: #cbd5f5;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.footer-section {
+    margin: 10px;
+}
+
+.footer-section a {
+    color: #cbd5f5;
+    text-decoration: none;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+}
+/* =======================
+   SALON HERO (TOP BANNER)
+======================= */
+.salon-hero {
+    position: relative;
+    height: 350px;
+    background: url('https://images.openai.com/static-rsc-4/jmWeP9aR0DOKdPEMGULzPNQrN07GYS3malhaSFZi9aVMEWEntiXVnS6pfCqDic-QHo8Vw8-4-6_bAFRmL2Vm2wNS0yJWOgdX4CdhXO6xkxueJXBqvfOKNCOR8N1LJAaEnk5EcEK6WqNbNezB1q8751HbSRqin2T1xGNqlp5AgSw?purpose=inline'
+) center/cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Overlay */
+.salon-hero .overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+}
+
+/* Content */
+.hero-content {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+/* =======================
+   SERVICES SECTION
+======================= */
+.salon-services {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.salon-services h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+/* Service Boxes */
+.services-list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.service-box {
+    background: #1e293b;
+    padding: 15px 25px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.service-box:hover {
+    background: #6366f1;
+}
+
+/* Salon Card */
+/* FULL SIZE INCREASE (ALL SIDES) */
+.salon-card {
+    width: 600px;        /* increases LEFT & RIGHT */
+    padding: 40px;       /* increases TOP & BOTTOM + inside spacing */
+    margin: 60px auto;   /* increases space OUTSIDE (top-bottom) */
+    
+    border-radius: 20px;
+    background: #1e293b;
+}
+
+
+/* Form Styling */
+.salon-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.salon-form input,
+.salon-form select {
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #334155;
+    background: #111827;
+    color: white;
+    width: 100%;
+    padding: 15px;   /* bigger input fields */
+}
+
+
+
+/* Button */
+.salon-form button {
+    padding: 12px;
+    background: #6366f1;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+}
+
+.salon-form button:hover {
+    background: #818cf8;
+}
+
+/* Container styling */
+.services-section {
+  background-color: #0f172a; /* Deep dark blue/black */
+  padding: 60px 20px;
+  text-align: center;
+  font-family: 'Inter', sans-serif;
+}
+
+.services-title {
+  color: #ffffff;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+/* Grid/Flex wrapper */
+.services-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  display: flex;
+  justify-content: center; /* Centers the boxes */
+  flex-wrap: wrap;         /* Allows boxes to wrap to next line on mobile */
+  gap: 20px;               /* This creates exactly 20px of space between them */
+
+}
+
+/* The Service Cards */
+.service-card {
+  background: rgba(255, 255, 255, 0.05); /* Semi-transparent white */
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 16px 28px;
+  color: #cbd5e1;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease; /* Smooth transition for everything */
+  font-weight: 500;
+  backdrop-filter: blur(4px); /* Glassmorphism effect */
+  margin: 0 10px; /* Adds 10px of space to the left and right of every box */
+  padding: 12px 24px; /* More room inside the box */
+  border-radius: 8px;   /* Slightly rounded corners look more premium */
+  
+  
+  display: inline-flex; 
+  align-items: center;
+}
+
+/* Hover States - This makes it "Effective" */
+.service-card:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: #38bdf8; /* A bright primary accent color (Sky Blue) */
+  color: #ffffff;
+  transform: translateY(-5px); /* Lifts the card up */
+  box-shadow: 0 10px 20px -10px rgba(56, 189, 248, 0.5);
+}
+
+/* Specific styling for the icons/emojis */
+.service-icon {
+  font-size: 1.2rem;
+  filter: drop-shadow(0 0 5px rgba(0,0,0,0.5));
+}
+/* --- Hero Section Styles --- */
+.grocery-hero {
+  position: relative;
+  min-height: 600px;
+  background: url('https://images.unsplash.com/photo-1542838132-92c53300491e?q=80&w=2000') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero-content { max-width: 900px; padding: 20px; }
+
+.delivery-pill {
+  display: inline-flex; align-items: center;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 10px 20px; border-radius: 50px;
+  backdrop-filter: blur(10px); margin-bottom: 20px;
+}
+
+.status-dot {
+  height: 10px; width: 10px; background: #5d5dff;
+  border-radius: 50%; margin-right: 10px;
+  box-shadow: 0 0 10px #5d5dff;
+}
+
+.hero-title { font-size: clamp(2.5rem, 6vw, 4.5rem); font-weight: 800; margin-bottom: 20px; }
+.hero-subtitle { font-size: 1.2rem; margin-bottom: 30px; opacity: 0.9; }
+
+.hero-btns { display: flex; gap: 15px; justify-content: center; }
+.hero-btns a { text-decoration: none; padding: 15px 35px; border-radius: 8px; font-weight: 700; }
+.btn-primary { background: #fff; color: #000; }
+.btn-secondary { border: 1px solid #fff; color: #fff; }
+
+/* --- Form Section Styles --- */
+.form-wrapper { background: #0d1222; padding: 80px 20px; display: flex; justify-content: center; }
+.order-container { width: 100%; max-width: 900px; background: #161b2c; padding: 40px; border-radius: 15px; color: white; }
+.form-header { text-align: center; margin-bottom: 30px; font-size: 2rem; }
+
+.item-tags { margin-bottom: 20px; }
+.tag-group { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 10px; }
+.tag { background: #0d1222; border: 1px solid #333; padding: 8px 15px; border-radius: 50px; font-size: 14px; }
+
+.field { margin-bottom: 20px; }
+.field label { display: block; margin-bottom: 8px; font-size: 14px; opacity: 0.8; }
+.styled-form input, .styled-form select {
+  width: 100%; padding: 15px; background: #0d1222; border: 1px solid #2d3446; color: #fff; border-radius: 8px;
+}
+
+.submit-btn {
+  width: 100%; background: #4f46e5; color: white; padding: 18px; 
+  border-radius: 8px; font-weight: bold; border: none; cursor: pointer; font-size: 1.1rem;
+}
+.submit-btn:hover { background: #4338ca; }
+/* =======================
+   🎮 PLAY ZONE SECTION START
+======================= */
+
+/* HERO SECTION */
+.playzone-hero {
+    position: relative;
+    height: 450px;
+
+    /* YOUR IMAGE + OVERLAY */
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.5)),
+                url('https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2c/eb/a3/a3/caption.jpg?w=900&h=500&s=1');
+
+    background-size: 100% 100%;   /* 🔥 full visible + fills hero */
+    background-repeat: no-repeat;
+    background-position: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* HERO TEXT */
+.playzone-hero .hero-content {
+    color: white;
+}
+
+.playzone-hero h1 {
+font-size: 3.5rem;
+    font-weight: 900;   /* 🔥 extra bold */
+    color: #ffffff;
+
+    /* 🔥 glow effect for visibility */
+    text-shadow: 
+        0 0 10px rgba(255,255,255,0.8),
+        0 0 20px rgba(255,255,255,0.6),
+        0 0 30px rgba(0,0,0,0.8);
+}
+
+.playzone-hero p {
+   font-size: 20px;
+    font-weight: 600;
+    color: #e2e8f0;
+
+    /* slight shadow for clarity */
+    text-shadow: 0 2px 8px rgba(0,0,0,0.7); 
+}
+
+/* HERO BUTTON */
+.playzone-btn {
+    margin-top: 20px;
+    display: inline-block;
+    padding: 12px 30px;
+    background: #3b82f6;  /* soft blue */
+    color: white;
+    font-weight: bold;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.playzone-btn:hover {
+    background: #2563eb;
+}
+
+/* =======================
+   GAME OPTIONS SECTION
+======================= */
+.playzone-games {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.playzone-games h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+/* GAME LIST */
+.games-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+/* GAME BOX */
+.game-box {
+    background: #1e293b;
+    padding: 12px 25px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.game-box:hover {
+    background: #3b82f6;
+    transform: translateY(-5px);
+}
+
+/* =======================
+   BOOKING CARD
+======================= */
+.playzone-card {
+    width: 600px;
+    padding: 50px;
+    margin: 80px auto;
+
+    border-radius: 20px;
+    background: #1e293b;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+}
+
+/* FORM */
+.playzone-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* INPUTS */
+.playzone-form input,
+.playzone-form select {
+    padding: 16px;
+    border-radius: 8px;
+    border: 1px solid #334155;
+    background: #111827;
+    color: white;
+    width: 100%;
+}
+
+/* BUTTON */
+.playzone-form button {
+    width: 100%;
+    padding: 16px;
+    background: #3b82f6;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.playzone-form button:hover {
+    background: #2563eb;
+}
+
+/* =======================
+   RESPONSIVE
+======================= */
+@media (max-width: 600px) {
+    .playzone-card {
+        width: 90%;
+        padding: 30px;
+    }
+
+    .playzone-hero h1 {
+        font-size: 2rem;
+    }
+}
+
+/* =======================
+   🎮 PLAY ZONE SECTION END
+======================= */
+
+/* =======================
+   🎁 GIFTS HERO SECTION
+======================= */
+.gifts-hero {
+    position: relative;
+    height: 400px;
+
+    /* Image + dark overlay for visibility */
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.7)),
+                url('https://images.unsplash.com/photo-1513885535751-8b9238bd345a?q=80&w=2000');
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* HERO TEXT */
+.gifts-hero .hero-content {
+    color: white;
+}
+
+/* ✅ ONLY BOLD (NO LIGHT / NO GLOW) */
+.gifts-hero h1 {
+    font-size: 3rem;
+    font-weight: 900;
+    color: #ffffff;
+    text-shadow: none;   /* ❌ removes glow */
+}
+
+/* CLEAN SUBTEXT */
+.gifts-hero p {
+    font-size: 18px;
+    margin-top: 10px;
+    color: #e2e8f0;
+    text-shadow: none;   /* ❌ removes blur */
+}
+
+/* =======================
+   🎁 GIFTS FORM CARD
+======================= */
+.container {
+    display: flex;
+    justify-content: center;
+    padding: 60px 20px;
+}
+.gifts-card {
+    width: 450px;
+    padding: 40px;
+    margin: 60px auto;
+
+    border-radius: 20px;
+    background: #1e293b;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+
+    text-align: center;
+}
+
+/* FORM */
+.gifts-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* INPUTS */
+.gifts-form input,
+.gifts-form select {
+    width: 100%;
+    padding: 16px;
+    border-radius: 10px;
+    background: #0d1222;
+    border: 1px solid #2d3446;
+    color: white;
+    font-size: 15px;
+}
+.gifts-form input::placeholder {
+    color: #94a3b8;
+}
+/* BUTTON */
+.gifts-form button {
+     width: 100%;
+    padding: 18px;
+    background: linear-gradient(90deg, #6366f1, #4f46e5);
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.gifts-form button:hover {
+   background: linear-gradient(90deg, #4f46e5, #4338ca) ;
+}
+
+/* =======================
+   RESPONSIVE
+======================= */
+@media (max-width: 600px) {
+    .gifts-card {
+        width: 90%;
+        padding: 25px;
+    }
+
+    .gifts-hero h1 {
+        font-size: 2rem;
+    }
+}
+/* =======================
+   🎁 GIFT CATEGORIES
+======================= */
+
+.gift-categories {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 50px 20px;
+    flex-wrap: wrap;
+}
+
+/* EACH BOX */
+.gift-box {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 20px;
+    width: 180px;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* IMAGE */
+.gift-box img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+/* TEXT */
+.gift-box p {
+    font-size: 18px;
+    font-weight: 600;
+    color: #000;
+}
+
+/* HOVER EFFECT */
+.gift-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+/* =======================
+   🧃 JUICE HERO SECTION
+======================= */
+.juice-hero {
+    position: relative;
+    height: 400px;
+
+    /* Juice Image + Overlay */
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.6)),
+                url('https://images.unsplash.com/photo-1553530666-ba11a7da3888?q=80&w=2000');
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* HERO TEXT */
+.juice-hero .hero-content {
+    color: white;
+}
+
+.juice-hero h1 {
+    font-size: 3rem;
+    font-weight: 900;
+    text-shadow: none; /* clean bold */
+}
+
+.juice-hero p {
+    font-size: 18px;
+    margin-top: 10px;
+    color: #e2e8f0;
+}
+
+/* =======================
+   🧃 JUICE FORM SECTION
+======================= */
+
+/* Container spacing */
+.container {
+    display: flex;
+    justify-content: center;
+    padding: 60px 20px;
+     align-items: center;
+    
+}
+
+/* Card */
+.juice-card {
+    width: 900px;
+    max-width: 95%;
+    background: #161b2c;
+    padding: 40px;
+    border-radius: 15px;
+    color: white;
+    max-width: 90%;
+    margin: auto; 
+}
+
+/* Heading */
+.juice-card h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 28px;
+}
+
+/* FORM */
+.juice-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* INPUTS */
+.juice-form input,
+.juice-form select {
+    width: 100%;
+    padding: 16px;
+    border-radius: 10px;
+    background: #0d1222;
+    border: 1px solid #2d3446;
+    color: white;
+    font-size: 15px;
+}
+
+/* Placeholder */
+.juice-form input::placeholder {
+    color: #94a3b8;
+}
+
+/* BUTTON */
+.juice-form button {
+    width: 100%;
+    padding: 18px;
+    background: linear-gradient(90deg, #4338ca, #4338ca); /* orange theme */
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.juice-form button:hover {
+    background: linear-gradient(90deg, #4338ca, #4338ca);
+}
+
+/* =======================
+   RESPONSIVE
+======================= */
+@media (max-width: 600px) {
+    .juice-card {
+        padding: 25px;
+    }
+
+    .juice-hero h1 {
+        font-size: 2rem;
+    }
+}
+.footer {
+    margin-top: 80px;
+}
+/* =======================
+    🧃 JUICE PRODUCT CARDS
+======================= */
+.juice-products {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    justify-items: center;
+}
+
+.product-card {
+    background: #ffffff; /* White background like the image */
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    width: 100%;
+    max-width: 320px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+}
+
+.product-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: contain; /* Keeps bottle shape perfect */
+    margin-bottom: 20px;
+}
+
+.product-card h3 {
+    color: #1e293b; /* Dark text for the white card */
+    font-size: 1.1rem;
+    font-weight: 600;
+    line-height: 1.4;
+    margin: 0;
+    padding: 10px;
+    border-top: 1px solid #e2e8f0;
+}
+
+/* Adjusting your existing container for better flow */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+/* =======================
+   BAKERY PAGE BASE
+======================= */
+.bakery-page {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    color: white;
+}
+
+/* =======================
+   NAVBAR 
+======================= */
+.bakery-page nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    background: #1e293b;
+    padding: 10px;
+}
+
+.bakery-page nav a {
+    color: #cbd5f5;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.bakery-page nav a:hover {
+    color: white;
+}
+
+.bakery-page nav a.active {
+    color: white;
+}
+
+/* =======================
+   HERO
+======================= */
+.bakery-page .hero {
+    height: 60vh;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.7)),
+                url('https://thumbs.dreamstime.com/b/bakery-shop-filled-shelves-fresh-bread-bakery-shop-filled-shelves-fresh-bread-ai-generated-323033779.jpg');
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.bakery-page .hero-content h1 {
+    font-size: 2.5rem;
+}
+
+.bakery-page .hero-btn {
+    display: inline-block;
+    margin-top: 15px;
+    background: white;
+    padding: 12px 25px;
+    border-radius: 25px;
+    color: black;
+    text-decoration: none;
+}
+
+/* =======================
+   CAKE LIST (SCROLL)
+======================= */
+.cake-list {
+    display: flex;
+    gap: 15px;
+    padding: 30px 20px;
+    overflow-x: auto;
+}
+
+.cake-card {
+    min-width: 180px;
+    background: #1e293b;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.cake-card:hover {
+    background: #4f46e5;
+}
+
+/* =======================
+   ORDER FORM - UPDATED
+======================= */
+.bakery-page .container {
+    display: flex;
+    justify-content: center;
+    /* Increased vertical padding to give more room outside the form */
+    padding: 80px 20px; 
+}
+
+.bakery-page .card {
+    background: #0f172a;
+    /* Increased padding from 30px to 50px for internal "breathability" */
+    padding: 50px; 
+    border-radius: 16px;
+    width: 100%;
+    /* Increased max-width from 500px to 700px to make it wider */
+    max-width: 700px; 
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.bakery-page form {
+    display: flex;
+    flex-direction: column;
+    /* Increased gap between inputs for a larger feel */
+    gap: 25px; 
+}
+
+.bakery-page input,
+.bakery-page select {
+    /* Increased height/padding of the input fields themselves */
+    padding: 16px; 
+    font-size: 1rem;
+    border-radius: 8px;
+    background: #020617;
+    color: white;
+    border: 1px solid #334155;
+}
+
+.bakery-page button {
+    background: #4f46e5;
+    /* Made the button taller to match the larger inputs */
+    padding: 16px; 
+    font-size: 1.1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.bakery-page button:hover {
+    background: #6366f1;
+}
+/* =======================
+   FOOTER
+======================= */
+.bakery-page .footer {
+    text-align: center;
+    padding: 20px;
+    background: #020617;
+}
+/* =======================
+   🔵 DELIVERY BADGE (PILL)
+======================= */
+.delivery-pill {
+    display: inline-flex;
+    align-items: center;
+
+    background: rgba(30, 41, 59, 0.6);  /* glass effect */
+    border: 1px solid rgba(99, 102, 241, 0.5);
+
+    padding: 8px 20px;
+    border-radius: 50px;
+
+    font-size: 14px;
+    color: #cbd5f5;
+
+    margin-bottom: 20px;
+
+    backdrop-filter: blur(10px); /* 🔥 glass look */
+}
+
+/* 🔵 GLOW DOT */
+.status-dot {
+    height: 10px;
+    width: 10px;
+    background: #6366f1;
+    border-radius: 50%;
+    margin-right: 10px;
+
+    box-shadow: 0 0 10px #6366f1; /* glow effect */
+}
+/* =======================
+   🎁 GIFTS ORDER FORM
+======================= */
+
+.gifts-card {
+    width: 100%;
+    max-width: 420px;
+    margin: 50px auto;
+    padding: 30px;
+    background: #1e293b;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    text-align: center;
+}
+
+.gifts-card h2 {
+    margin-bottom: 20px;
+    color: white;
+}
+
+/* FORM LAYOUT */
+#giftsForm {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* INPUTS + SELECT + TEXTAREA */
+#giftsForm input,
+#giftsForm select,
+#giftsForm textarea {
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    background: #0f172a;
+    color: white;
+}
+
+/* PLACEHOLDER COLOR */
+#giftsForm input::placeholder,
+#giftsForm textarea::placeholder {
+    color: #94a3b8;
+}
+
+/* BUTTON */
+#giftsForm button {
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background: blue;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* BUTTON HOVER */
+#giftsForm button:hover {
+    background: blue;
+    transform: scale(1.03);
+}
+/* =======================
+   🧃 JUICE ORDER FORM
+======================= */
+
+.juice-card {
+    width: 100%;
+    max-width: 420px;
+    margin: 50px auto;
+    padding: 30px;
+    background: #1e293b;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    text-align: center;
+}
+
+.juice-card h2 {
+    margin-bottom: 20px;
+    color: white; /* light blue */
+}
+
+/* FORM LAYOUT */
+#juiceForm {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* INPUT, SELECT, TEXTAREA */
+#juiceForm input,
+#juiceForm select,
+#juiceForm textarea {
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    background: #0f172a;
+    color: white;
+}
+
+/* PLACEHOLDER */
+#juiceForm input::placeholder,
+#juiceForm textarea::placeholder {
+    color: #94a3b8;
+}
+
+/* BUTTON */
+#juiceForm button {
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background: blue;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* HOVER EFFECT */
+#juiceForm button:hover {
+    background: blue;
+    transform: scale(1.03);
+}
+.playzone-card h2 {
+    margin-top: 0;
+    margin-bottom: 25px;
+    text-align: center;
+    color: #ffffff; /* Changed to white */
+    font-size: 2rem;
+}
+
+#playzoneForm {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#playzoneForm input, 
+#playzoneForm select, 
+#playzoneForm textarea {
+    padding: 15px;
+    background-color: #0f172a; /* Dark navy input background */
+    border: 1px solid #334155; /* Muted border */
+    border-radius: 8px;
+    font-size: 16px;
+    color: #ffffff; /* White text for typing */
+    outline: none;
+    transition: 0.3s;
+}
+
+/* Placeholder color styling */
+#playzoneForm input::placeholder, 
+#playzoneForm textarea::placeholder {
+    color: #64748b;
+}
+
+#playzoneForm input:focus, 
+#playzoneForm select:focus, 
+#playzoneForm textarea:focus {
+    border-color: #0000ff; /* Electric blue border on focus */
+}
+
+#playzoneForm textarea {
+    height: 100px;
+    resize: none;
+}
+
+#playzoneForm button {
+    background: #0000ff; /* Bright electric blue */
+    color: white;
+    padding: 16px;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 10px;
+}
+
+#playzoneForm button:hover {
+    background: #1a1aff; /* Slightly lighter on hover */
+    box-shadow: 0 0 15px rgba(0, 0, 255, 0.4);
+}
