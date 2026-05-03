@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Play Zone Booking</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>🎮 Play Zone Booking</header>
+
+<div style="background: #0f172a; color: #94a3b8; padding: 10px; text-align: center;">
+    Welcome, <span class="user-display-name" style="color: #3b82f6; font-weight: bold;"></span>! | <a href="#" onclick="logout()" style="color: #ef4444; margin-left: 15px;">Logout</a>
+</div>
+
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="food.html">Food</a>
+    <a href="salon.html">Salon</a>
+    <a href="grocery.html">Grocery</a>
+    <a href="playzone.html">Play Zone</a>
+    <a href="gifts.html">Gifts</a>
+    <a href="juice.html">Juice</a>
+    <a href="bakery.html">Bakery</a>
+      <a href="orders.html" onclick="showOrders()">My Orders</a>
+      
+      <a href="admin.html" class="admin-btn">🛡️ Admin</a>
+    
+</nav>
+
+<!-- 🎮 HERO SECTION -->
+<section class="playzone-hero">
+    <div class="hero-content">
+
+        <div class="delivery-pill">
+            <span class="status-dot"></span>
+            Step in for non-stop fun!
+        </div>
+
+        <h1>🎮 Play Zone</h1>
+        <p>Enjoy VR, Bowling & Arcade Games</p>
+
+    </div>
+</section>
+
+<!-- 🎮 ACTIVITIES -->
+<section class="juice-products">
+    <div class="product-grid">
+
+        <div class="product-card">
+            <img src="https://images.unsplash.com/photo-1603481588273-2f908a9a7a1b">
+            <h3>VR Gaming Experience</h3>
+        </div>
+
+        <div class="product-card">
+            <img src="https://images.unsplash.com/photo-1599058917765-a780eda07a3e">
+            <h3>Bowling Arena</h3>
+        </div>
+
+        <div class="product-card">
+            <img src="https://images.unsplash.com/photo-1580327344181-c1163234e5a0">
+            <h3>Arcade Fun Zone</h3>
+        </div>
+
+    </div>
+</section>
+
+<!-- 🎮 BOOKING FORM -->
+<div class="container">
+    <div class="playzone-card">
+
+        <h2>Book Slot</h2>
+
+        <form id="playzoneForm">
+
+            <input type="text" id="name" placeholder="Enter Name" required>
+
+            <select id="item" required>
+                <option value="">Select Game</option>
+                <option value="VR Gaming">VR Gaming ₹500</option>
+                <option value="Bowling">Bowling ₹600</option>
+                <option value="Arcade">Arcade ₹700</option>
+                <option value="Table Tennis">Table Tennis₹300</option>
+                <option value="VR Gaming">VR Gaming - ₹450</option>
+<option value="Bowling">Bowling - ₹250</option>
+<option value="Arcade">Arcade - ₹500</option>
+<option value="Table Tennis">Table Tennis - ₹300</option>
+<option value="Billiards">Billiards - ₹400</option>
+<option value="Air Hockey">Air Hockey - ₹150</option>
+<option value="Foosball">Foosball - ₹200</option>
+<option value="Laser Tag">Laser Tag - ₹600</option>
+<option value="Escape Room">Escape Room - ₹850</option>
+<option value="Indoor Trampoline">Indoor Trampoline - ₹700</option>
+<option value="Go-Karting">Go-Karting - ₹950</option>
+<option value="Paintball">Paintball - ₹1200</option>
+<option value="Snooker">Snooker - ₹500</option>
+<option value="Darts">Darts - ₹250</option>
+<option value="VR Horror">VR Horror - ₹550</option>
+<option value="Sim-Racing">Sim-Racing - ₹350</option>
+<option value="PlayStation 5">PlayStation 5 - ₹250</option>
+<option value="Xbox Series X">Xbox Series X - ₹250</option>
+<option value="Nintendo Switch">Nintendo Switch - ₹200</option>
+<option value="PC Gaming Lounge">PC Gaming Lounge - ₹150</option>
+<option value="Retro Console">Retro Console - ₹100</option>
+<option value="Basketball Shootout">Basketball Shootout - ₹80</option>
+<option value="Dance Dance Revolution">Dance Dance Revolution - ₹120</option>
+<option value="Whack-a-Mole">Whack-a-Mole - ₹60</option>
+<option value="Claw Machine">Claw Machine - ₹50</option>
+<option value="Skee-Ball">Skee-Ball - ₹70</option>
+<option value="Pinball">Pinball - ₹90</option>
+<option value="Street Fighter">Street Fighter - ₹100</option>
+<option value="Pac-Man Retro">Pac-Man Retro - ₹80</option>
+<option value="Racing Simulator">Racing Simulator - ₹650</option>
+<option value="VR Flight Simulator">VR Flight Simulator - ₹750</option>
+<option value="Augmented Reality">Augmented Reality - ₹300</option>
+<option value="Ice Skating">Ice Skating - ₹800</option>
+<option value="Rock Climbing">Rock Climbing - ₹500</option>
+<option value="Archery">Archery - ₹450</option>
+<option value="Rifle Shooting">Rifle Shooting - ₹400</option>
+<option value="Cricket Machine">Cricket Machine - ₹350</option>
+<option value="Badminton Court">Badminton Court - ₹600</option>
+<option value="Squash Court">Squash Court - ₹700</option>
+<option value="Swimming Pool">Swimming Pool - ₹500</option>
+<option value="Mini Golf">Mini Golf - ₹450</option>
+<option value="Chess Lounge">Chess Lounge - ₹150</option>
+<option value="Board Game Cafe">Board Game Cafe - ₹250</option>
+<option value="Carrom Board">Carrom Board - ₹150</option>
+<option value="Poker Night">Poker Night - ₹1500</option>
+<option value="Karaoke Room">Karaoke Room - ₹1200</option>
+<option value="Giant Jenga">Giant Jenga - ₹200</option>
+<option value="Connect Four">Connect Four - ₹180</option>
+<option value="Bubble Football">Bubble Football - ₹1000</option>
+<option value="Zorb Ball">Zorb Ball - ₹800</option>
+<option value="VR Roller Coaster">VR Roller Coaster - ₹300</option>
+<option value="Zombie Survival VR">Zombie Survival VR - ₹600</option>
+<option value="Beat Saber">Beat Saber - ₹400</option>
+<option value="Shooting Gallery">Shooting Gallery - ₹100</option>
+<option value="Motorcycle Racing">Motorcycle Racing - ₹150</option>
+<option value="Jurassic Park Shooter">Jurassic Park Shooter - ₹200</option>
+<option value="Air Rifle Sniper">Air Rifle Sniper - ₹600</option>
+<option value="Mechanical Bull">Mechanical Bull - ₹350</option>
+<option value="Bungee Trampoline">Bungee Trampoline - ₹450</option>
+<option value="Human Foosball">Human Foosball - ₹1200</option>
+<option value="Soft Play Area">Soft Play Area - ₹300</option>
+<option value="Ball Pit Access">Ball Pit Access - ₹200</option>
+<option value="Puppet Show">Puppet Show - ₹150</option>
+<option value="Magic Show">Magic Show - ₹250</option>
+<option value="Face Painting">Face Painting - ₹150</option>
+<option value="Clay Modeling">Clay Modeling - ₹500</option>
+<option value="Pottery Wheel">Pottery Wheel - ₹700</option>
+<option value="Art Studio Pass">Art Studio Pass - ₹600</option>
+<option value="VR Tilt Brush">VR Tilt Brush - ₹450</option>
+<option value="Glow Bowling">Glow Bowling - ₹400</option>
+<option value="Bumper Cars">Bumper Cars - ₹200</option>
+<option value="Ferris Wheel">Ferris Wheel - ₹150</option>
+<option value="Carousel">Carousel - ₹100</option>
+<option value="Roller Coaster">Roller Coaster - ₹350</option>
+<option value="4D Cinema">4D Cinema - ₹400</option>
+<option value="7D Theatre">7D Theatre - ₹500</option>
+<option value="Mirror Maze">Mirror Maze - ₹250</option>
+<option value="Haunted House">Haunted House - ₹450</option>
+<option value="VIP Gaming Suite">VIP Gaming Suite - ₹3500</option>
+<option value="Tekken Arcade">Tekken Arcade - ₹120</option>
+<option value="Guitar Hero">Guitar Hero - ₹150</option>
+<option value="Dodgeball Arena">Dodgeball Arena - ₹400</option>
+<option value="Sumo Wrestling">Sumo Wrestling - ₹600</option>
+<option value="Gladiator Joust">Gladiator Joust - ₹550</option>
+<option value="Water Balloon Fight">Water Balloon Fight - ₹300</option>
+<option value="RC Car Track">RC Car Track - ₹250</option>
+<option value="Drone Racing">Drone Racing - ₹1200</option>
+<option value="Mystery Puzzle">Mystery Puzzle - ₹300</option>
+<option value="VR Education Tour">VR Education Tour - ₹400</option>
+<option value="Climbing Rope">Climbing Rope - ₹450</option>
+<option value="Day Pass Arcade">Day Pass Arcade - ₹2500</option>
+<option value="Virtual Tennis">Virtual Tennis - ₹350</option>
+<option value="Interactive Quiz">Interactive Quiz - ₹200</option>
+<option value="Prize Wheel Spin">Prize Wheel Spin - ₹100</option>
+<option value="Digital Escape">Digital Escape - ₹400</option>
+<option value="Synth Rider VR">Synth Rider VR - ₹400</option>
+<option value="Indoor Archery">Indoor Archery - ₹500</option>
+<option value="Cricket Net">Cricket Net - ₹800</option>
+<option value="Mini Hockey">Mini Hockey - ₹150</option>
+<option value="Target Shooting">Target Shooting - ₹300</option>
+            </select>
+
+            <input type="time" id="time" required>
+
+            <textarea id="notes" placeholder="Notes (optional)"></textarea>
+
+            <button type="submit">Book Slot</button>
+
+        </form>
+
+    </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-container">
+
+    <div class="footer-section">
+      <h3>Sitemap</h3>
+      <a href="index.html">Home</a>
+      <a href="food.html">Food</a>
+      <a href="salon.html">Salon</a>
+      <a href="grocery.html">Grocery</a>
+      <a href="playzone.html">Play Zone</a>
+      <a href="gifts.html">Gifts</a>
+      <a href="juice.html">Juice</a>
+      <a href="bakery.html">Bakery</a>
+    </div>
+
+    <div class="footer-section">
+      <h3>Address</h3>
+      <p>17km Stone, NH-19, Mathura-Delhi Road, P.O. Chaumuhan</p>
+      <p>Mathura - 281406, Uttar Pradesh</p>
+    </div>
+
+    <div class="footer-section">
+      <h3>Contacts</h3>
+      <p>
+        +91-5662-250900,
+        250909, 241489,
+        +91-9927064017
+      </p>
+      <p>glauniversity@gla.ac.in</p>
+    </div>
+
+    <div class="footer-section social">
+      <h3>Follow Us</h3>
+      <div class="icons">
+        <span>📘</span>
+        <span>📸</span>
+        <span>🌐</span>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    © 2026 GD Subway | All Rights Reserved
+  </div>
+</footer>
+
+<!-- ✅ CONNECTED SCRIPT -->
+<script>
+    // Add this at the start of your script section
+if (sessionStorage.getItem('isLoggedIn') !== 'true') {
+    window.location.href = 'login.html';
+}
+document.getElementById("playzoneForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    const name = document.getElementById("name").value;
+    const item = document.getElementById("item").value;
+    const time = document.getElementById("time").value;
+    const notes = document.getElementById("notes").value;
+
+    
+    // DYNAMIC PRICE EXTRACTION
+    let extractedPrice = 0;
+    const allSelects = document.querySelectorAll('select');
+    let targetSelect = allSelects.length > 0 ? allSelects[0] : null;
+    if (targetSelect && targetSelect.selectedIndex >= 0) {
+        const selectedText = targetSelect.options[targetSelect.selectedIndex].text;
+        const match = selectedText.match(/₹([\d,]+)/);
+        if (match) extractedPrice = parseInt(match[1].replace(/,/g, ''), 10);
+    }
+    
+    let dynamicQuantity = 1;
+    const dynQtyInput = document.querySelector('input[type="number"], #quantity');
+    if (dynQtyInput) {
+        dynamicQuantity = parseInt(dynQtyInput.value, 10) || 1;
+    }
+    const totalPrice = extractedPrice * dynamicQuantity;
+    
+    fetch("http://localhost:3000/api/orders", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            type: "playzone",
+            name,
+            item,
+            quantity: time,
+            notes
+        , price: extractedPrice, total: totalPrice, rollNumber: sessionStorage.getItem("rollNumber"), type: "playzone"})
+    })
+    .then(res => res.json())
+    .then(data => {
+        alert(data.message + " Total: ₹" + totalPrice);
+        document.getElementById("playzoneForm").reset();
+    })
+    .catch(err => console.error("Error:", err));
+});
+</script>
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const userRole = sessionStorage.getItem('userRole');
+        const adminBtns = document.querySelectorAll('.admin-btn');
+        if (userRole !== 'admin') {
+            adminBtns.forEach(btn => btn.style.display = 'none');
+        }
+    });
+</script>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const name = sessionStorage.getItem('userName');
+    
+    // Update all welcome texts
+    const displayNames = document.querySelectorAll('.user-display-name');
+    displayNames.forEach(el => { el.innerText = name || 'User'; });
+    
+    // Auto-fill the order form name field
+    const nameInput = document.getElementById('name');
+    if (nameInput) {
+        nameInput.value = name || '';
+        nameInput.setAttribute('readonly', 'true');
+        nameInput.style.backgroundColor = '#1e293b'; // slightly darker to indicate it's readonly
+        nameInput.style.color = '#94a3b8';
+        nameInput.style.cursor = 'not-allowed';
+    }
+});
+
+function logout() {
+    sessionStorage.clear();
+    window.location.href = 'login.html';
+}
+</script>
+
+</body>
+
+</html>
